@@ -16,7 +16,8 @@ export const STYLE = `
 .dp-value[data-tone=short]{color:var(--dsw-alias-state-warn-label,var(--dsw-alias-state-warn-primary))}
 .dp-note{margin:12px 0 0;color:var(--dsw-alias-label-secondary);font-size:13px;line-height:20px}
 .dp-error{margin:12px 0 0;color:var(--dsw-alias-state-error-primary);font-size:13px;line-height:20px;overflow-wrap:anywhere}
-.dp-footer{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.dp-footer{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;width:100%}
+.dp-footer>*{white-space:nowrap}
 @media (width<=640px),(pointer:coarse){.dp-footer>*{flex:1 1 0;min-height:44px}}
 `
 

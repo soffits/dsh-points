@@ -1,6 +1,6 @@
 {
   "name": "@soffits/dsh-points",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Spend earned points inside DeepSeek Harness: any plugin can price an extra, and at the moment of the action the person sees the price and their balance in one dialog and buys it there, through the points ledger they already keep.",
   "type": "module",
   "license": "MIT",
