@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Points",
+    "description": "Dépensez vos points là où vous êtes : quand quelque chose coûte des points, une fenêtre montre le prix et votre solde, et l’achète si vous dites oui."
+  },
+  "ui": {
+    "title": "Dépenser des points",
+    "price": "Prix",
+    "balance": "Vos points",
+    "after": "Après l’achat",
+    "toEarn": "Encore à gagner",
+    "buy": "Acheter pour {cost}",
+    "buying": "Achat…",
+    "notNow": "Pas maintenant",
+    "ok": "OK",
+    "close": "Fermer",
+    "pending": "Un ticket pour ceci attend une validation.",
+    "short": "Pas encore assez de points. Chaque chose terminée en rapporte.",
+    "failed": "L’achat n’a pas abouti : {message}",
+    "loadFailed": "Impossible de vérifier vos points : {message}"
+  }
+}

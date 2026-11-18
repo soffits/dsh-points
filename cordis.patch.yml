@@ -1,0 +1,6 @@
+# Bundle layer for @soffits/dsh-points: one Host row that provides the
+# `points` service and the offer dialog's routes. Set `command` (the points
+# ledger) in a profile override of this row; empty, nothing costs points.
+- insert:
+    - id: points
+      name: '@soffits/dsh-points'

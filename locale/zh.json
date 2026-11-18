@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "积分",
+    "description": "在用到的地方花积分：需要积分的时候，弹窗显示价格和余额，点兑换就买好。"
+  },
+  "ui": {
+    "title": "花积分",
+    "price": "价格",
+    "balance": "你的积分",
+    "after": "兑换后剩",
+    "toEarn": "还差",
+    "buy": "用 {cost} 分兑换",
+    "buying": "兑换中…",
+    "notNow": "先不了",
+    "ok": "好",
+    "close": "关闭",
+    "pending": "这个的兑换券还在等批准。",
+    "short": "积分还不够，做完的事都会攒分。",
+    "failed": "没有成功：{message}",
+    "loadFailed": "查不到积分：{message}"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Points",
+    "description": "Spend earned points where you are: when something costs points, a dialog shows the price and your balance and buys it on a yes."
+  },
+  "ui": {
+    "title": "Spend points",
+    "price": "Price",
+    "balance": "Your points",
+    "after": "Left after",
+    "toEarn": "Still to earn",
+    "buy": "Buy for {cost}",
+    "buying": "Buying…",
+    "notNow": "Not now",
+    "ok": "OK",
+    "close": "Close",
+    "pending": "A ticket for this is waiting for approval.",
+    "short": "Not enough points yet. Finishing things earns more.",
+    "failed": "That didn’t go through: {message}",
+    "loadFailed": "Couldn’t check your points: {message}"
+  }
+}
