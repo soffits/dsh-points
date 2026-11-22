@@ -1,6 +1,6 @@
 # dsh-points
 
-Spend earned points inside the [DeepSeek Harness](https://github.com/deepseek-ai/dsh) Web UI. When an action in any plugin costs points (starting something new, an extra that's normally off), a dialog shows the price, your balance and what's left after, and buys it when you say yes. Saying no costs nothing.
+Spend earned points inside the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web UI. When an action in any plugin costs points (starting something new, an extra that's normally off), a dialog shows the price, your balance and what's left after, and buys it when you say yes. Saying no costs nothing.
 
 The plugin keeps no points itself. It talks to a ledger you already run, a command that keeps the shop, the tickets and the balances ([ledger protocol](docs/ledger-protocol.md)), and reads every number from it when asked.
 
