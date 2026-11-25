@@ -2,7 +2,7 @@
 
 Spend earned points inside the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web UI. When an action in any plugin costs points (starting something new, an extra that's normally off), a dialog shows the price, your balance and what's left after, and buys it when you say yes. Saying no costs nothing.
 
-The plugin keeps no points itself. It talks to a ledger you already run, a command that keeps the shop, the tickets and the balances ([ledger protocol](docs/ledger-protocol.md)), and reads every number from it when asked.
+The plugin keeps no points itself. It talks to a ledger you already run, a command that keeps the shop, the tickets and the balances ([ledger protocol](https://github.com/soffits/dsh-points/blob/main/docs/ledger-protocol.md)), and reads every number from it when asked.
 
 ## Install
 
@@ -29,6 +29,21 @@ Point the row at your ledger in your profile's `cordis.patch.yml`:
 | `timeoutSeconds` | `20` | How long one ledger call may take before it counts as failed. |
 
 If the ledger fails, actions go through as if free and the DSH log says why: points never stop anyone using a plugin.
+
+The ledger is any program that speaks the four verbs of the [ledger protocol](https://github.com/soffits/dsh-points/blob/main/docs/ledger-protocol.md). This stand-in gives everyone 100 points and prices every item at 30; save it as `/home/me/bin/my-ledger`, `chmod +x` it, and set `command: [/home/me/bin/my-ledger]` (the command is run as written, so give a full path; `~` is not expanded here):
+
+```sh
+#!/bin/sh
+case "$1" in
+  shop)  echo '{"recorded":true}' ;;
+  check) echo '{"item":"'"$3"'","valid":false,"ticket":null,"pending":false,"quote":{"name":{"en":"Item"},"about":"","cost":30,"balance":100,"gap":0,"affordable":true}}' ;;
+  buy)   echo '{"recorded":true,"ticket":{"id":"t1"}}' ;;
+  use)   echo '{"recorded":true}' ;;
+  *) echo "unknown verb: $1" >&2; exit 2 ;;
+esac
+```
+
+Two things to know before expecting anything on screen. The plugin adds nothing of its own to the Web UI: the dialog appears only when another plugin sells an extra through it (see the next section). And it asks only for a signed-in person, so on a DSH with no sign-in plugin (one that provides `requestIdentity`) every action stays free and the ledger is never called.
 
 ## Selling an extra from your plugin
 
@@ -73,7 +88,7 @@ npm test        # offline: a fake ledger in test/fixtures/
 npm run build   # rebuild client.js after changing src/client/ or locale/
 ```
 
-Design notes are in [docs/decisions.md](docs/decisions.md).
+Design notes are in [docs/decisions.md](https://github.com/soffits/dsh-points/blob/main/docs/decisions.md).
 
 ## License
 
