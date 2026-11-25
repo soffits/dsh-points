@@ -30,7 +30,7 @@ Point the row at your ledger in your profile's `cordis.patch.yml`:
 
 If the ledger fails, actions go through as if free and the DSH log says why: points never stop anyone using a plugin.
 
-The ledger is any program that speaks the four verbs of the [ledger protocol](https://github.com/soffits/dsh-points/blob/main/docs/ledger-protocol.md). This stand-in gives everyone 100 points and prices every item at 30; save it as `~/bin/my-ledger`, `chmod +x` it, and set `command: [~/bin/my-ledger]`:
+The ledger is any program that speaks the four verbs of the [ledger protocol](https://github.com/soffits/dsh-points/blob/main/docs/ledger-protocol.md). This stand-in gives everyone 100 points and prices every item at 30; save it as `/home/me/bin/my-ledger`, `chmod +x` it, and set `command: [/home/me/bin/my-ledger]` (the command is run as written, so give a full path; `~` is not expanded here):
 
 ```sh
 #!/bin/sh
